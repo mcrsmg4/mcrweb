@@ -8,36 +8,37 @@
   <!-- Favicon -->
   <link rel="icon" href="https://cdn.discordapp.com/attachments/1238523854373261444/1327588161303609364/IMG_0181.png?ex=67c435d3&is=67c2e453&hm=9b3b26b4dadf24c11ad88652d96325b6b69d48fe389eb32692cded4e72ccd371&" type="image/png">
   
+  <!-- External Stylesheets -->
+  <link rel="stylesheet" href="styles.css">
   <!-- Font Awesome for Social Icons -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
-  
-  <!-- Link to your CSS -->
-  <link rel="stylesheet" href="styles.css">
+  <!-- AOS for scroll animations -->
+  <link rel="stylesheet" href="https://unpkg.com/aos@2.3.1/dist/aos.css">
 </head>
 <body>
-  
+
   <!-- Parallax Background -->
   <div id="parallax-bg"></div>
-  
-  <!-- Main Content Container -->
+
+  <!-- Main Content Container with Blur Effect -->
   <div id="content-container">
     <header>
-      <h1>MCRSMG4</h1>
-      <p>Autistic Tech Creator | Batch Developer | Video Editor | Streamer</p>
-      <nav>
+      <h1 data-aos="fade-down">MCRSMG4</h1>
+      <p data-aos="fade-up">Autistic Tech Creator | Batch Developer | Video Editor | Streamer</p>
+      <nav data-aos="fade-up">
         <a href="#about">About</a>
         <a href="#projects">Projects</a>
         <a href="#contact">Contact</a>
       </nav>
     </header>
-    
-    <!-- Other sections go here... -->
-    <section id="about">
+
+    <section id="about" data-aos="fade-up">
       <h2>About Me</h2>
       <p>
         Hi! I’m MCRSMG4, but you can call me MCR. I am an autistic tech creator from the UK, and I'm a batch developer,
         with a bunch of other interests like video editing, streaming, playing my survival world on Minecraft,
         and I enjoy British stuff, especially Wallace and Gromit!
+        My DMs are open, so if you wanna have a chat, please do, and maybe I’ll add you back.
         <br><br>
         <span class="bouncing-colours">
           I am an osu player who maps (playing the 2025 rendition of RDT), and a gaming enjoyer who has spent so much time on Roblox,
@@ -45,8 +46,8 @@
         </span>
       </p>
     </section>
-    
-    <section id="projects">
+
+    <section id="projects" data-aos="fade-up">
       <h2>Projects</h2>
       <ul>
         <li>
@@ -61,8 +62,8 @@
         </li>
       </ul>
     </section>
-    
-    <section id="contact">
+
+    <section id="contact" data-aos="fade-up">
       <h2>Contact Me</h2>
       <p>
         For sponsorships and business inquiries, contact me at:
@@ -78,11 +79,9 @@
         <button type="submit">Send Message</button>
       </form>
     </section>
-    
-    <!-- Footer Section -->
+
     <footer>
       <p>© 2025 MCRSMG4</p>
-      <!-- Socials below the copyright -->
       <div class="socials">
         <a href="https://github.com/mcrsmg4" target="_blank" title="GitHub"><i class="fab fa-github"></i> GitHub</a>
         <a href="https://www.tiktok.com/@british_smg4" target="_blank" title="TikTok"><i class="fab fa-tiktok"></i> TikTok</a>
@@ -90,13 +89,13 @@
         <a href="https://www.youtube.com/channel/UCKG5GWoY0veXUKpKYNY4c-w" target="_blank" title="YouTube"><i class="fab fa-youtube"></i> YouTube</a>
         <a href="https://steamcommunity.com/id/mcrsmg4" target="_blank" title="Steam"><i class="fab fa-steam"></i> Steam</a>
         <a href="https://discord.gg/VHgW6ctWnh" target="_blank" title="Discord"><i class="fab fa-discord"></i> Discord</a>
-        <a href="https://osu.ppy.sh/users/28003457" target="_blank" title="osu! Profile"><i class="fas fa-headphones-alt"></i> osu!</a>
+        <a href="https://osu.ppy.sh/users/28003457" target="_blank" title="osu Profile"><i class="fas fa-headphones-alt"></i> osu!</a>
         <a href="https://github.com/mcrsmg4/rsh" target="_blank" title="Random Screenshots"><i class="fas fa-image"></i> Screenshots</a>
       </div>
     </footer>
   </div>
   
-  <!-- AOS for animations -->
+  <!-- AOS Library for Scroll Animations -->
   <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
   <script>
     AOS.init({ duration: 1000 });
@@ -108,21 +107,18 @@
       document.getElementById("parallax-bg").style.transform = `translate(${x}px, ${y}px)`;
     });
 
-    // Array of background image URLs
+    // Random Background Image
     const backgrounds = [
       "https://wallpapercave.com/wp/yUSimAc.jpg",
       "https://wallpapercave.com/wp/URJccpL.jpg",
       "https://wallpapercave.com/wp/ErpUyPw.jpg"
     ];
 
-    // Function to set a random background image
     function setRandomBackground() {
       const randomIndex = Math.floor(Math.random() * backgrounds.length);
-      const parallaxBg = document.getElementById("parallax-bg");
-      parallaxBg.style.backgroundImage = `url(${backgrounds[randomIndex]})`;
+      document.getElementById("parallax-bg").style.backgroundImage = `url(${backgrounds[randomIndex]})`;
     }
 
-    // Set random background on page load
     window.onload = setRandomBackground;
   </script>
 </body>
