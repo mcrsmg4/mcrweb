@@ -8,7 +8,7 @@
   <!-- Favicon -->
   <link rel="icon" href="https://cdn.discordapp.com/attachments/1238523854373261444/1327588161303609364/IMG_0181.png?ex=67c435d3&is=67c2e453&hm=9b3b26b4dadf24c11ad88652d96325b6b69d48fe389eb32692cded4e72ccd371&" type="image/png">
   
-  <!-- External Stylesheets -->
+  <!-- External CSS -->
   <link rel="stylesheet" href="styles.css">
   <!-- Font Awesome for Social Icons -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
@@ -20,7 +20,7 @@
   <!-- Parallax Background -->
   <div id="parallax-bg"></div>
 
-  <!-- Main Content Container with Blur Effect -->
+  <!-- Main Content Container with White, Semi-Transparent Background and Blur -->
   <div id="content-container">
     <header>
       <h1 data-aos="fade-down">MCRSMG4</h1>
@@ -32,6 +32,7 @@
       </nav>
     </header>
 
+    <!-- About Section -->
     <section id="about" data-aos="fade-up">
       <h2>About Me</h2>
       <p>
@@ -47,6 +48,7 @@
       </p>
     </section>
 
+    <!-- Projects Section -->
     <section id="projects" data-aos="fade-up">
       <h2>Projects</h2>
       <ul>
@@ -63,10 +65,11 @@
       </ul>
     </section>
 
+    <!-- Contact Section -->
     <section id="contact" data-aos="fade-up">
       <h2>Contact Me</h2>
       <p>
-        For sponsorships and business inquiries, contact me at:
+        For sponsorships and business inquiries, contact me at:  
         <a href="mailto:contactechbrittish@proton.me" class="email-link">contactechbrittish@proton.me</a>
       </p>
       <p>
@@ -80,6 +83,7 @@
       </form>
     </section>
 
+    <!-- Footer Section with Socials Below Copyright -->
     <footer>
       <p>© 2025 MCRSMG4</p>
       <div class="socials">
@@ -94,7 +98,7 @@
       </div>
     </footer>
   </div>
-  
+
   <!-- AOS Library for Scroll Animations -->
   <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
   <script>
@@ -107,18 +111,20 @@
       document.getElementById("parallax-bg").style.transform = `translate(${x}px, ${y}px)`;
     });
 
-    // Random Background Image
+    // Array of background image URLs
     const backgrounds = [
       "https://wallpapercave.com/wp/yUSimAc.jpg",
       "https://wallpapercave.com/wp/URJccpL.jpg",
       "https://wallpapercave.com/wp/ErpUyPw.jpg"
     ];
 
+    // Function to set a random background image
     function setRandomBackground() {
       const randomIndex = Math.floor(Math.random() * backgrounds.length);
       document.getElementById("parallax-bg").style.backgroundImage = `url(${backgrounds[randomIndex]})`;
     }
 
+    // Set random background on page load
     window.onload = setRandomBackground;
   </script>
 </body>
