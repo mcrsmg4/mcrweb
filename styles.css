@@ -3,7 +3,8 @@ body {
   font-family: Arial, sans-serif;
   margin: 0;
   padding: 0;
-  color: #333;
+  color: #333; /* Make the text a dark color for readability */
+  background-color: #f4f4f4; /* Set a background color for the body */
 }
 
 /* Parallax background */
@@ -16,6 +17,7 @@ body {
   background-size: cover;
   background-position: center;
   z-index: -1; /* Keeps the background behind the content */
+  transition: background-image 0.5s ease-in-out; /* Smooth transition for background change */
 }
 
 /* White box with background blur */
@@ -23,19 +25,42 @@ body {
   max-width: 1200px;
   margin: 0 auto;
   padding: 40px;
-  background-color: rgba(255, 255, 255, 0.8); /* White background with transparency */
+  background-color: rgba(255, 255, 255, 0.9); /* Slightly more opaque background for contrast */
   border-radius: 10px;
-  backdrop-filter: blur(10px); /* Applies a blur effect to the background */
+  backdrop-filter: blur(15px); /* Apply blur effect to the background */
   box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1); /* Optional shadow for a subtle effect */
+  color: #333; /* Ensure text is dark and readable */
+  z-index: 1; /* Ensure content is on top of the background */
 }
 
-header h1, header p {
+/* Text styling */
+header h1 {
   text-align: center;
-  color: #333;
+  color: #333; /* Dark color for visibility */
+  font-size: 2.5em;
+  margin-bottom: 10px;
+}
+
+header p {
+  text-align: center;
+  color: #555; /* Lighter color for the subtext */
+  font-size: 1.2em;
 }
 
 section {
   margin-bottom: 40px;
+}
+
+h2 {
+  color: #333; /* Dark color for section titles */
+  font-size: 2em;
+  margin-bottom: 10px;
+}
+
+p {
+  color: #555; /* Lighter color for body text */
+  font-size: 1.1em;
+  line-height: 1.6;
 }
 
 ul {
@@ -63,5 +88,15 @@ footer {
 
 footer p {
   font-size: 14px;
-  color: #777;
+  color: #777; /* Light color for footer text */
+}
+
+footer .socials a {
+  margin: 0 10px;
+  color: #333; /* Dark color for social links */
+  font-size: 1.5em;
+}
+
+footer .socials a:hover {
+  color: #007BFF;
 }
