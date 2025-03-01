@@ -8,9 +8,98 @@
   <!-- Favicon link -->
   <link rel="icon" href="https://cdn.discordapp.com/attachments/1238523854373261444/1327588161303609364/IMG_0181.png?ex=67c435d3&is=67c2e453&hm=9b3b26b4dadf24c11ad88652d96325b6b69d48fe389eb32692cded4e72ccd371&" type="image/png">
 
+  <!-- External Stylesheets -->
   <link rel="stylesheet" href="styles.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
   <link rel="stylesheet" href="https://unpkg.com/aos@2.3.1/dist/aos.css">
+  
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      overflow-x: hidden;
+      background-color: #f4f4f4;
+    }
+
+    #parallax-bg {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100vh;
+      background-size: cover;
+      background-position: center;
+      z-index: -1;
+      transition: background 1s ease-in-out;
+    }
+
+    header {
+      text-align: center;
+      padding: 20px;
+      color: white;
+      z-index: 1;
+    }
+
+    h1 {
+      font-size: 3em;
+      margin: 0;
+      font-weight: bold;
+    }
+
+    p {
+      font-size: 1.2em;
+      margin: 10px 0;
+    }
+
+    nav a {
+      margin: 0 15px;
+      color: #fff;
+      text-decoration: none;
+      font-weight: bold;
+      text-transform: uppercase;
+    }
+
+    section {
+      padding: 50px 15px;
+      color: #333;
+      text-align: center;
+    }
+
+    footer {
+      text-align: center;
+      background-color: #222;
+      color: white;
+      padding: 20px;
+    }
+
+    .socials a {
+      margin: 0 15px;
+      color: white;
+      font-size: 1.5em;
+    }
+
+    .email-link {
+      color: #3498db;
+    }
+
+    .email-link:hover {
+      text-decoration: underline;
+    }
+
+    .bouncing-colours {
+      display: inline-block;
+      animation: bounce 1s infinite alternate;
+    }
+
+    @keyframes bounce {
+      0% {
+        transform: translateY(0);
+      }
+      100% {
+        transform: translateY(-10px);
+      }
+    }
+  </style>
 </head>
 <body>
 
@@ -91,6 +180,19 @@
   <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
   <script>
     AOS.init({ duration: 1000 });
+
+    // List of background images
+    const images = [
+      'https://wallpapercave.com/wp/yUSimAc.jpg',
+      'https://wallpapercave.com/wp/URJccpL.jpg',
+      'https://wallpapercave.com/wp/ErpUyPw.jpg'
+    ];
+
+    // Get a random image from the list
+    const randomImage = images[Math.floor(Math.random() * images.length)];
+
+    // Set the random image as the background of the #parallax-bg element
+    document.getElementById('parallax-bg').style.backgroundImage = `url(${randomImage})`;
 
     // Parallax Effect on Mouse Movement
     document.addEventListener("mousemove", function(event) {
