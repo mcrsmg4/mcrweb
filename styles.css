@@ -1,191 +1,207 @@
-/* General Reset */
+/* Global Styles */
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
 
-/* Body & Background */
 body {
   font-family: 'Arial', sans-serif;
-  overflow-x: hidden;
-  background-color: #111;
-}
-
-/* Parallax Background */
-#parallax-bg {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background-position: center;
-  background-size: cover;
-  filter: blur(5px);
-  z-index: -1;
-}
-
-/* Content Container */
-#content-container {
-  position: relative;
-  z-index: 1;
   color: #fff;
-  padding: 50px;
-  max-width: 1200px;
-  margin: 0 auto;
+  background-color: #111;  /* Dark background color */
+  background-image: url('https://wallpapercave.com/wp/yUSimAc.jpg'); /* Parallax background */
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
 }
 
-/* Header */
 header {
   text-align: center;
+  padding: 50px 20px;
+  position: relative;
 }
 
-header h1 {
+h1 {
   font-size: 3em;
-  margin-bottom: 10px;
-}
-
-header p {
-  font-size: 1.2em;
-  margin-bottom: 20px;
-}
-
-header nav a {
-  margin: 0 15px;
   color: #fff;
+}
+
+p {
+  font-size: 1.2em;
+  color: #fff;
+  margin-top: 10px;
+}
+
+nav {
+  margin-top: 30px;
+}
+
+nav a {
+  margin: 0 15px;
+  color: #fff;  /* White color for links */
   text-decoration: none;
   font-size: 1.2em;
 }
 
-header nav a:hover {
-  color: #ffcc00;
+nav a:hover {
+  color: #ffcc00;  /* Yellow color on hover */
+}
+
+section {
+  text-align: center;
+  padding: 40px 20px;
+}
+
+h2 {
+  font-size: 2em;
+  color: #ffcc00;  /* Yellow color for section headers */
+}
+
+p, li {
+  font-size: 1.1em;
+  color: #fff;
+}
+
+ul {
+  list-style: none;
+  margin-top: 20px;
+}
+
+li {
+  margin-bottom: 20px;
+}
+
+a {
+  color: #ffcc00;  /* Yellow for clickable links */
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;  /* Underline effect on hover */
 }
 
 /* About Section */
 #about {
-  margin-bottom: 50px;
-  text-align: center;
+  background: rgba(0, 0, 0, 0.5);
+  border-radius: 10px;
+  padding: 20px;
+  margin-top: 20px;
+  max-width: 80%;
+  margin-left: auto;
+  margin-right: auto;
 }
 
-#about h2 {
-  font-size: 2.5em;
-  margin-bottom: 15px;
-}
-
-#about p {
-  font-size: 1.1em;
-  line-height: 1.6;
-}
-
-.bouncing-colours {
+#about .bouncing-colours {
   color: #ffcc00;
   font-weight: bold;
 }
 
 /* Projects Section */
-#projects ul {
-  list-style-type: none;
-  padding: 0;
-}
-
-#projects li {
-  background-color: rgba(0, 0, 0, 0.6);
-  padding: 15px;
-  margin-bottom: 20px;
+#projects {
+  background: rgba(0, 0, 0, 0.5);
   border-radius: 10px;
-}
-
-#projects h3 {
-  font-size: 1.8em;
-  margin-bottom: 10px;
-}
-
-#projects a {
-  color: #ffcc00;
-  text-decoration: none;
-}
-
-#projects a:hover {
-  text-decoration: underline;
+  padding: 20px;
+  margin-top: 20px;
+  max-width: 80%;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 /* Contact Section */
-#contact form {
-  display: flex;
-  flex-direction: column;
+#contact {
+  background: rgba(0, 0, 0, 0.5);
+  border-radius: 10px;
+  padding: 20px;
   margin-top: 20px;
+  max-width: 80%;
+  margin-left: auto;
+  margin-right: auto;
 }
 
-#contact input,
-#contact textarea {
+form input, form textarea, form button {
+  width: 100%;
   padding: 10px;
-  margin-bottom: 15px;
-  border: 1px solid #333;
+  margin: 10px 0;
   border-radius: 5px;
-  background-color: #222;
-  color: #fff;
+  border: none;
 }
 
-#contact button {
-  padding: 12px;
+form button {
   background-color: #ffcc00;
-  color: #222;
-  border: none;
-  border-radius: 5px;
-  font-size: 1.1em;
+  color: #111;
+  font-size: 1.2em;
   cursor: pointer;
 }
 
-#contact button:hover {
-  background-color: #e6b800;
+form button:hover {
+  background-color: #ff9900;
 }
 
-/* Footer */
+/* Footer Section */
 footer {
   text-align: center;
-  margin-top: 50px;
+  padding: 20px;
+  background-color: #111;
+  margin-top: 20px;
 }
 
 footer p {
-  font-size: 1.2em;
-  margin-bottom: 20px;
+  font-size: 1em;
+  color: #fff;
 }
 
 footer .socials {
-  display: flex;
-  justify-content: center;
-  gap: 15px;
+  margin-top: 15px;
 }
 
 footer .socials a {
   font-size: 1.5em;
   color: #fff;
   text-decoration: none;
+  margin: 0 10px;
 }
 
 footer .socials a:hover {
-  color: #ffcc00;
+  color: #ffcc00;  /* Yellow color on hover */
 }
 
-/* Responsive Design */
+/* Media Queries */
 @media (max-width: 768px) {
   header h1 {
     font-size: 2.5em;
   }
 
-  header nav a {
+  p {
+    font-size: 1.1em;
+  }
+
+  nav a {
     font-size: 1em;
   }
 
-  #about h2 {
+  #about, #projects, #contact {
+    max-width: 90%;
+  }
+}
+
+@media (max-width: 480px) {
+  header h1 {
     font-size: 2em;
   }
 
-  #projects h3 {
-    font-size: 1.5em;
+  p {
+    font-size: 1em;
   }
 
-  footer .socials a {
-    font-size: 1.2em;
+  nav a {
+    font-size: 0.9em;
+  }
+
+  #about, #projects, #contact {
+    max-width: 95%;
   }
 }
