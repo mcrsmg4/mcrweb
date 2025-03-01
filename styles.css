@@ -1,14 +1,19 @@
-/* Basic Reset */
+/* General Reset */
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
 
-html, body {
+/* Body and Overall Styles */
+body {
   font-family: 'Arial', sans-serif;
-  height: 100%;
   background-color: #f4f4f4;
+  color: #333;
+  overflow-x: hidden;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
 }
 
 /* Parallax Background */
@@ -18,207 +23,179 @@ html, body {
   left: 0;
   width: 100%;
   height: 100%;
-  background-image: url('https://wallpapercave.com/wp/QDnTRHS.jpg');
   background-position: center;
   background-size: cover;
   z-index: -1;
   transition: transform 0.1s ease;
 }
 
+/* Header Section */
 header {
   text-align: center;
+  padding: 100px 20px;
   color: #fff;
-  padding: 50px 0;
-  background: rgba(0, 0, 0, 0.6);
+  z-index: 1;
 }
 
 header h1 {
-  font-size: 3.5rem;
-  margin-bottom: 10px;
+  font-size: 3.5em;
+  font-weight: bold;
+  margin-bottom: 20px;
+  letter-spacing: 2px;
 }
 
 header p {
-  font-size: 1.2rem;
-  margin-bottom: 20px;
+  font-size: 1.5em;
+  margin-bottom: 30px;
 }
 
-nav {
+header nav {
   display: flex;
   justify-content: center;
-  gap: 20px;
+  gap: 15px;
 }
 
-nav a {
+header nav a {
   color: #fff;
-  font-size: 1.1rem;
   text-decoration: none;
-  padding: 10px 15px;
-  transition: background-color 0.3s;
+  font-size: 1.2em;
+  padding: 10px;
+  border-radius: 5px;
+  transition: all 0.3s ease;
 }
 
-nav a:hover {
-  background-color: #008CBA;
-  border-radius: 5px;
+header nav a:hover {
+  background-color: rgba(255, 255, 255, 0.3);
+  transform: scale(1.1);
 }
 
 /* About Section */
-section {
-  padding: 50px 15%;
+#about {
+  padding: 60px 20px;
+  background-color: #fff;
   text-align: center;
-  background-color: #f9f9f9;
-}
-
-section h2 {
-  font-size: 2.5rem;
-  margin-bottom: 20px;
-}
-
-section p {
-  font-size: 1.1rem;
-  line-height: 1.8;
   color: #333;
 }
 
-.bouncing-colours {
-  animation: bounce-colours 2s infinite alternate;
+#about h2 {
+  font-size: 2.5em;
+  margin-bottom: 20px;
+  color: #222;
 }
 
-@keyframes bounce-colours {
+#about p {
+  font-size: 1.2em;
+  line-height: 1.6;
+  margin-bottom: 40px;
+}
+
+.bouncing-colours {
+  display: inline-block;
+  animation: bounce 1.5s ease-in-out infinite alternate;
+}
+
+@keyframes bounce {
   0% {
-    color: #ff1493;
-  }
-  25% {
-    color: #32cd32;
-  }
-  50% {
-    color: #1e90ff;
-  }
-  75% {
-    color: #ff8c00;
+    transform: translateY(0);
   }
   100% {
-    color: #ff1493;
+    transform: translateY(-10px);
   }
-}
-
-/* Projects Section */
-#projects {
-  background-color: #fff;
-  padding: 50px 15%;
-}
-
-#projects h2 {
-  font-size: 2.5rem;
-  margin-bottom: 20px;
-}
-
-#projects ul {
-  list-style: none;
-}
-
-#projects li {
-  background: #f1f1f1;
-  margin: 20px 0;
-  padding: 20px;
-  border-radius: 8px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-}
-
-#projects h3 {
-  font-size: 2rem;
-  color: #008CBA;
-}
-
-#projects p {
-  font-size: 1.1rem;
-  margin-bottom: 15px;
-}
-
-#projects a {
-  color: #fff;
-  background-color: #008CBA;
-  padding: 10px 20px;
-  text-decoration: none;
-  border-radius: 5px;
-  font-weight: bold;
-  transition: background-color 0.3s;
-}
-
-#projects a:hover {
-  background-color: #005f7a;
 }
 
 /* Contact Section */
 #contact {
-  background-color: #f9f9f9;
-  padding: 50px 15%;
+  padding: 60px 20px;
+  background-color: #f4f4f4;
+  color: #333;
+  text-align: center;
 }
 
 #contact h2 {
-  font-size: 2.5rem;
+  font-size: 2.5em;
   margin-bottom: 20px;
 }
 
 #contact p {
-  font-size: 1.1rem;
-  color: #333;
-  margin-bottom: 15px;
+  font-size: 1.2em;
+  margin-bottom: 30px;
 }
 
-.email-link {
-  color: #008CBA;
+#contact .email-link {
+  color: #ff6347;
   text-decoration: none;
+  font-weight: bold;
+  transition: color 0.3s ease;
 }
 
-.email-link:hover {
-  text-decoration: underline;
+#contact .email-link:hover {
+  color: #ff4500;
 }
 
 form {
+  max-width: 500px;
+  margin: 0 auto;
   display: flex;
   flex-direction: column;
-  gap: 15px;
 }
 
-form input, form textarea, form button {
+form input, form textarea {
   padding: 12px;
-  font-size: 1.1rem;
-  border: 1px solid #ddd;
-  border-radius: 8px;
+  margin: 10px 0;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-size: 1em;
 }
 
 form button {
-  background-color: #008CBA;
+  background-color: #ff6347;
   color: #fff;
+  padding: 12px;
+  border: none;
+  border-radius: 5px;
+  font-size: 1.2em;
   cursor: pointer;
-  font-weight: bold;
-  transition: background-color 0.3s;
+  transition: background-color 0.3s ease;
 }
 
 form button:hover {
-  background-color: #005f7a;
+  background-color: #ff4500;
 }
 
-/* Footer */
+/* Footer Section */
 footer {
+  padding: 20px 0;
   text-align: center;
-  padding: 20px;
   background-color: #333;
   color: #fff;
 }
 
 footer .socials a {
   color: #fff;
-  font-size: 2rem;
-  margin: 0 10px;
-  transition: color 0.3s;
+  margin: 0 15px;
+  font-size: 1.8em;
+  transition: color 0.3s ease;
 }
 
 footer .socials a:hover {
-  color: #008CBA;
+  color: #ff6347;
 }
 
-footer p {
-  margin-top: 10px;
-  font-size: 1rem;
+/* Media Queries for Responsiveness */
+@media (max-width: 768px) {
+  header h1 {
+    font-size: 2.5em;
+  }
+
+  header p {
+    font-size: 1.2em;
+  }
+
+  #about h2, #contact h2 {
+    font-size: 2em;
+  }
+
+  form {
+    padding: 0 20px;
+  }
 }
