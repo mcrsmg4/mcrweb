@@ -4,6 +4,10 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>MCRSMG4 - Portfolio</title>
+
+  <!-- Favicon link -->
+  <link rel="icon" href="https://cdn.discordapp.com/attachments/1238523854373261444/1327588161303609364/IMG_0181.png?ex=67c435d3&is=67c2e453&hm=9b3b26b4dadf24c11ad88652d96325b6b69d48fe389eb32692cded4e72ccd371&" type="image/png">
+
   <link rel="stylesheet" href="styles.css">
 </head>
 <body>
@@ -43,7 +47,7 @@
       <ul>
         <li>
           <h3>Titanic Client</h3>
-          <p>The base of the Mac Titanic client project made by Lekkuru, check him out. A private server that aims to support all osu! clients (2008-2024).</p>
+          <p>The base of the Mac Titanic client project. A private server that aims to support all osu! clients (2008-2024).</p>
           <a href="https://github.com/osuTitanic/titanic" target="_blank">Visit Titanic Project</a>
         </li>
         <li>
@@ -96,6 +100,23 @@
       let y = (window.innerHeight - event.pageY) / 100;
       document.getElementById("parallax-bg").style.transform = `translate(${x}px, ${y}px)`;
     });
+
+    // Array of background image URLs
+    const backgrounds = [
+      "https://wallpapercave.com/wp/yUSimAc.jpg",
+      "https://wallpapercave.com/wp/URJccpL.jpg",
+      "https://wallpapercave.com/wp/ErpUyPw.jpg"
+    ];
+
+    // Function to set a random background image
+    function setRandomBackground() {
+      const randomIndex = Math.floor(Math.random() * backgrounds.length);
+      const parallaxBg = document.getElementById("parallax-bg");
+      parallaxBg.style.backgroundImage = `url(${backgrounds[randomIndex]})`;
+    }
+
+    // Call the function on page load
+    window.onload = setRandomBackground;
   </script>
 
 </body>
