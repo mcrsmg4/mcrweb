@@ -11,16 +11,31 @@
   <!-- Parallax Background -->
   <div id="parallax-bg"></div>
 
-  <!-- White Box for Projects with Background Blur -->
+  <!-- Content Container -->
   <div id="content-container">
     <header>
       <h1>MCRSMG4</h1>
       <p>Autistic Tech Creator | Batch Developer | Video Editor | Streamer</p>
+      <nav>
+        <a href="#about">About</a>
+        <a href="#projects">Projects</a>
+        <a href="#contact">Contact</a>
+      </nav>
     </header>
 
     <section id="about">
       <h2>About Me</h2>
-      <p>Hi! I’m MCRSMG4, but you can call me MCR. I am an autistic tech creator from the UK...</p>
+      <p>
+        Hi! I’m MCRSMG4, but you can call me MCR. I am an autistic tech creator from the UK, and I'm a batch developer,  
+        with a bunch of other interests like video editing, streaming, playing my survival world on Minecraft,  
+        and I enjoy British stuff, especially Wallace and Gromit!  
+        My DMs are open, so if you wanna have a chat, please do, and maybe I’ll add you back.
+        <br><br>
+        <span class="bouncing-colours">
+          I am an osu player who maps (playing the 2025 rendition of RDT), and a gaming enjoyer who has spent so much time on Roblox, 
+          I wouldn’t know how many hours I’ve spent on this game.
+        </span>
+      </p>
     </section>
 
     <section id="projects">
@@ -39,28 +54,48 @@
       </ul>
     </section>
 
+    <section id="contact">
+      <h2>Contact Me</h2>
+      <p>
+        For sponsorships and business inquiries, contact me at:  
+        <a href="mailto:contactechbrittish@proton.me" class="email-link">contactechbrittish@proton.me</a>
+      </p>
+      <p>
+        My main Discord account is <strong>@mcrsmg4</strong>. My Discord is open—just please don’t say hello and then leave me on hold.
+      </p>
+      <form action="https://formspree.io/f/YOUR_FORM_ID" method="POST">
+        <input type="text" name="name" placeholder="Your Name" required>
+        <input type="email" name="email" placeholder="Your Email" required>
+        <textarea name="message" placeholder="Your Message" required></textarea>
+        <button type="submit">Send Message</button>
+      </form>
+    </section>
+
     <footer>
       <p>© 2025 MCRSMG4</p>
+      <div class="socials">
+        <a href="https://github.com/mcrsmg4" target="_blank" title="GitHub"><i class="fab fa-github"></i></a>
+        <a href="https://www.tiktok.com/@british_smg4" target="_blank" title="TikTok"><i class="fab fa-tiktok"></i></a>
+        <a href="https://x.com/mcrsmg4" target="_blank" title="X (Twitter)"><i class="fab fa-twitter"></i></a>
+        <a href="https://www.youtube.com/channel/UCKG5GWoY0veXUKpKYNY4c-w" target="_blank" title="YouTube"><i class="fab fa-youtube"></i></a>
+        <a href="https://steamcommunity.com/id/mcrsmg4" target="_blank" title="Steam"><i class="fab fa-steam"></i></a>
+        <a href="https://discord.gg/VHgW6ctWnh" target="_blank" title="Discord"><i class="fab fa-discord"></i></a>
+        <a href="https://osu.ppy.sh/users/28003457" target="_blank" title="osu Profile"><i class="fas fa-headphones-alt"></i></a>
+        <a href="https://github.com/mcrsmg4/rsh" target="_blank" title="Random Screenshots"><i class="fas fa-image"></i></a>
+      </div>
     </footer>
   </div>
 
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
   <script>
-    // Array of background image URLs
-    const backgrounds = [
-      "https://wallpapercave.com/wp/yUSimAc.jpg",
-      "https://wallpapercave.com/wp/URJccpL.jpg",
-      "https://wallpapercave.com/wp/ErpUyPw.jpg"
-    ];
+    AOS.init({ duration: 1000 });
 
-    // Function to set a random background image
-    function setRandomBackground() {
-      const randomIndex = Math.floor(Math.random() * backgrounds.length);
-      const parallaxBg = document.getElementById("parallax-bg");
-      parallaxBg.style.backgroundImage = `url(${backgrounds[randomIndex]})`;
-    }
-
-    // Call the function on page load
-    window.onload = setRandomBackground;
+    // Parallax Effect on Mouse Movement
+    document.addEventListener("mousemove", function(event) {
+      let x = (window.innerWidth - event.pageX) / 100;
+      let y = (window.innerHeight - event.pageY) / 100;
+      document.getElementById("parallax-bg").style.transform = `translate(${x}px, ${y}px)`;
+    });
   </script>
 
 </body>
