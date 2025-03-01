@@ -113,28 +113,39 @@ section p {
 }
 
 #projects ul {
-  list-style-type: none;
-  padding-left: 0;
+  list-style: none;
 }
 
 #projects li {
-  margin-bottom: 20px;
+  background: #f1f1f1;
+  margin: 20px 0;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
-#projects a {
-  font-size: 1.2rem;
+#projects h3 {
+  font-size: 2rem;
   color: #008CBA;
-  text-decoration: none;
-  transition: color 0.3s;
-}
-
-#projects a:hover {
-  color: #ff1493;
 }
 
 #projects p {
-  font-size: 1rem;
-  color: #666;
+  font-size: 1.1rem;
+  margin-bottom: 15px;
+}
+
+#projects a {
+  color: #fff;
+  background-color: #008CBA;
+  padding: 10px 20px;
+  text-decoration: none;
+  border-radius: 5px;
+  font-weight: bold;
+  transition: background-color 0.3s;
+}
+
+#projects a:hover {
+  background-color: #005f7a;
 }
 
 /* Contact Section */
@@ -150,18 +161,17 @@ section p {
 
 #contact p {
   font-size: 1.1rem;
-  margin-bottom: 20px;
   color: #333;
+  margin-bottom: 15px;
 }
 
 .email-link {
   color: #008CBA;
   text-decoration: none;
-  font-weight: bold;
 }
 
 .email-link:hover {
-  color: #ff1493;
+  text-decoration: underline;
 }
 
 form {
@@ -170,46 +180,37 @@ form {
   gap: 15px;
 }
 
-form input,
-form textarea {
+form input, form textarea, form button {
   padding: 12px;
-  font-size: 1rem;
-  border: 1px solid #ccc;
-  border-radius: 5px;
-  width: 100%;
+  font-size: 1.1rem;
+  border: 1px solid #ddd;
+  border-radius: 8px;
 }
 
 form button {
   background-color: #008CBA;
-  color: white;
-  padding: 12px 20px;
-  border: none;
-  border-radius: 5px;
+  color: #fff;
   cursor: pointer;
-  font-size: 1.2rem;
+  font-weight: bold;
+  transition: background-color 0.3s;
 }
 
 form button:hover {
-  background-color: #006f8f;
+  background-color: #005f7a;
 }
 
-/* Footer Section */
+/* Footer */
 footer {
-  background-color: #333;
-  color: white;
   text-align: center;
   padding: 20px;
-}
-
-footer p {
-  margin: 10px 0;
+  background-color: #333;
+  color: #fff;
 }
 
 footer .socials a {
-  font-size: 1.5rem;
-  color: white;
+  color: #fff;
+  font-size: 2rem;
   margin: 0 10px;
-  text-decoration: none;
   transition: color 0.3s;
 }
 
@@ -217,26 +218,7 @@ footer .socials a:hover {
   color: #008CBA;
 }
 
-/* Responsive Design */
-@media (max-width: 768px) {
-  section {
-    padding: 50px 10%;
-  }
-
-  header h1 {
-    font-size: 2.5rem;
-  }
-
-  nav a {
-    font-size: 1rem;
-    padding: 8px 12px;
-  }
-
-  #projects, #contact {
-    padding: 40px 10%;
-  }
-
-  form input, form textarea, form button {
-    font-size: 1rem;
-  }
+footer p {
+  margin-top: 10px;
+  font-size: 1rem;
 }
