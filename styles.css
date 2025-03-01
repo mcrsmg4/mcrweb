@@ -1,102 +1,191 @@
-/* General body styles */
-body {
-  font-family: Arial, sans-serif;
+/* General Reset */
+* {
   margin: 0;
   padding: 0;
-  color: #333; /* Make the text a dark color for readability */
-  background-color: #f4f4f4; /* Set a background color for the body */
+  box-sizing: border-box;
 }
 
-/* Parallax background */
+/* Body & Background */
+body {
+  font-family: 'Arial', sans-serif;
+  overflow-x: hidden;
+  background-color: #111;
+}
+
+/* Parallax Background */
 #parallax-bg {
   position: absolute;
   top: 0;
   left: 0;
   width: 100%;
   height: 100%;
-  background-size: cover;
   background-position: center;
-  z-index: -1; /* Keeps the background behind the content */
-  transition: background-image 0.5s ease-in-out; /* Smooth transition for background change */
+  background-size: cover;
+  filter: blur(5px);
+  z-index: -1;
 }
 
-/* White box with background blur */
+/* Content Container */
 #content-container {
+  position: relative;
+  z-index: 1;
+  color: #fff;
+  padding: 50px;
   max-width: 1200px;
   margin: 0 auto;
-  padding: 40px;
-  background-color: rgba(255, 255, 255, 0.9); /* Slightly more opaque background for contrast */
-  border-radius: 10px;
-  backdrop-filter: blur(15px); /* Apply blur effect to the background */
-  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1); /* Optional shadow for a subtle effect */
-  color: #333; /* Ensure text is dark and readable */
-  z-index: 1; /* Ensure content is on top of the background */
 }
 
-/* Text styling */
-header h1 {
+/* Header */
+header {
   text-align: center;
-  color: #333; /* Dark color for visibility */
-  font-size: 2.5em;
+}
+
+header h1 {
+  font-size: 3em;
   margin-bottom: 10px;
 }
 
 header p {
-  text-align: center;
-  color: #555; /* Lighter color for the subtext */
+  font-size: 1.2em;
+  margin-bottom: 20px;
+}
+
+header nav a {
+  margin: 0 15px;
+  color: #fff;
+  text-decoration: none;
   font-size: 1.2em;
 }
 
-section {
-  margin-bottom: 40px;
+header nav a:hover {
+  color: #ffcc00;
 }
 
-h2 {
-  color: #333; /* Dark color for section titles */
-  font-size: 2em;
-  margin-bottom: 10px;
+/* About Section */
+#about {
+  margin-bottom: 50px;
+  text-align: center;
 }
 
-p {
-  color: #555; /* Lighter color for body text */
+#about h2 {
+  font-size: 2.5em;
+  margin-bottom: 15px;
+}
+
+#about p {
   font-size: 1.1em;
   line-height: 1.6;
 }
 
-ul {
+.bouncing-colours {
+  color: #ffcc00;
+  font-weight: bold;
+}
+
+/* Projects Section */
+#projects ul {
   list-style-type: none;
   padding: 0;
 }
 
-li {
+#projects li {
+  background-color: rgba(0, 0, 0, 0.6);
+  padding: 15px;
   margin-bottom: 20px;
+  border-radius: 10px;
 }
 
-a {
-  color: #007BFF;
+#projects h3 {
+  font-size: 1.8em;
+  margin-bottom: 10px;
+}
+
+#projects a {
+  color: #ffcc00;
   text-decoration: none;
 }
 
-a:hover {
+#projects a:hover {
   text-decoration: underline;
 }
 
+/* Contact Section */
+#contact form {
+  display: flex;
+  flex-direction: column;
+  margin-top: 20px;
+}
+
+#contact input,
+#contact textarea {
+  padding: 10px;
+  margin-bottom: 15px;
+  border: 1px solid #333;
+  border-radius: 5px;
+  background-color: #222;
+  color: #fff;
+}
+
+#contact button {
+  padding: 12px;
+  background-color: #ffcc00;
+  color: #222;
+  border: none;
+  border-radius: 5px;
+  font-size: 1.1em;
+  cursor: pointer;
+}
+
+#contact button:hover {
+  background-color: #e6b800;
+}
+
+/* Footer */
 footer {
   text-align: center;
-  margin-top: 40px;
+  margin-top: 50px;
 }
 
 footer p {
-  font-size: 14px;
-  color: #777; /* Light color for footer text */
+  font-size: 1.2em;
+  margin-bottom: 20px;
+}
+
+footer .socials {
+  display: flex;
+  justify-content: center;
+  gap: 15px;
 }
 
 footer .socials a {
-  margin: 0 10px;
-  color: #333; /* Dark color for social links */
   font-size: 1.5em;
+  color: #fff;
+  text-decoration: none;
 }
 
 footer .socials a:hover {
-  color: #007BFF;
+  color: #ffcc00;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  header h1 {
+    font-size: 2.5em;
+  }
+
+  header nav a {
+    font-size: 1em;
+  }
+
+  #about h2 {
+    font-size: 2em;
+  }
+
+  #projects h3 {
+    font-size: 1.5em;
+  }
+
+  footer .socials a {
+    font-size: 1.2em;
+  }
 }
